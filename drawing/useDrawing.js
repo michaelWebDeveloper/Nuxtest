@@ -1,27 +1,19 @@
-import GetRenderableElements from "~/drawing/getRenderableElements.js";
-
+import useElements from "~/drawing/useElements.js";
 
 export default function useDrawing(ctx, canvas) {
 
-    /** Список отображаемых сущностей */
-    const elements = GetRenderableElements()
+    const {fillElements, renderElements} = useElements()
+    fillElements()
 
     /** Чистка канваса */
     const clear = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height)
     }
 
-    /** Отрисовка отображаемых сущностей */
-    const renderElements = () => {
-        elements.forEach(element => {
-            element.render(ctx)
-        })
-    }
-
     /** Цикл отрисовки */
     const renderLoop = () => {
         clear()
-        renderElements()
+        renderElements(ctx)
         requestAnimationFrame(renderLoop)
     }
 
