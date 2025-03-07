@@ -1,0 +1,23 @@
+@font-face {
+    font-family: RussoOne;
+    src: url('../../public/fonts/RussoOne-Regular.ttf');
+}
+@font-face {
+    font-family: Monserat;
+    src: url('../../public/fonts/MontserratAlternates-Medium.ttf');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #d8d8d8;
+}
+body{
+    background-color: #181818;
+    font-family: Monserat, sans-serif;
+    padding-bottom: 700px;
+    background-image: url('../ripoff.jpg');
+    background-repeat: no-repeat;
+    background-size: 460px;
+}
