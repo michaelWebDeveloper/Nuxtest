@@ -31,12 +31,19 @@
         <p class="technology_title">{{ logo.text }}</p>
       </div>
     </div>
+
+    <div class="container">
+      <WorkExperience/>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import '~/assets/css/base.css'
 import { onMounted, ref } from 'vue'
+
+// Components
+import WorkExperience from '~/components/landing/WorkExperience.vue'
 
 const playStuff = ref(true)
 const logos_arrays = ref([
