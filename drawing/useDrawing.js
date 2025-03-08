@@ -1,9 +1,11 @@
 import useElements from "~/drawing/useElements.js";
+import config from "~/drawing/config.js";
 
 export default function useDrawing(ctx, canvas) {
 
-    const {fillElements, renderElements} = useElements()
+    const {fillElements, renderElements, targetTest} = useElements()
     fillElements()
+    targetTest()
 
     /** Чистка канваса */
     const clear = () => {
@@ -19,6 +21,8 @@ export default function useDrawing(ctx, canvas) {
 
     /** Инициализация цикла отрисовки */
     const initRenderLoop = () => {
+        config.canvas_width = canvas.width
+        config.canvas_height = canvas.height
         renderLoop()
     }
 

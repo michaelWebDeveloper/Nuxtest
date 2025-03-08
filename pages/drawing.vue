@@ -2,11 +2,12 @@
   <div class="canvas_wrapper" ref="canvas_wrapper">
     <canvas id="canvas" ref="canvas"></canvas>
     <div class="info">
-      <h1>hello</h1>
-      <p>this is my somehitng of somehting and something
-        of somehting and something
-        of somehting and something
-        of somehting and something </p>
+      <h1 class="info_title">Hello</h1>
+      <p class="info_message">
+        I don't want everything on web to be trivial and boring,
+        I take general interest in design and experiences that people have
+        while browsing sites and applications
+      </p>
     </div>
   </div>
 </template>
@@ -38,10 +39,13 @@
 .info{
   padding: 50px;
   background-color: #b28aff;
+  color: #232323;
   position: absolute;
   top: 128px;
   left: 150px;
-  width: 300px;
-  font-family: Arial;
+  width: 400px;
+}
+.info_title{
+  padding-bottom: 20px;
 }
 </style>
